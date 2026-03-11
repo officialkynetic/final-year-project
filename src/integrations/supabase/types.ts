@@ -14,7 +14,117 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      predictions: {
+        Row: {
+          blood_group: string | null
+          confidence: number | null
+          created_at: string
+          father_genotype: string | null
+          has_delayed_growth: boolean | null
+          has_fatigue: boolean | null
+          has_frequent_infections: boolean | null
+          has_jaundice: boolean | null
+          has_joint_pain: boolean | null
+          has_swelling: boolean | null
+          hematocrit: number | null
+          hemoglobin_level: number | null
+          id: string
+          mch: number | null
+          mchc: number | null
+          mcv: number | null
+          mother_genotype: string | null
+          patient_age: number
+          patient_gender: string
+          patient_name: string
+          platelet_count: number | null
+          predicted_genotype: string | null
+          rbc_count: number | null
+          recommendation: string | null
+          risk_level: string | null
+          user_id: string
+          wbc_count: number | null
+        }
+        Insert: {
+          blood_group?: string | null
+          confidence?: number | null
+          created_at?: string
+          father_genotype?: string | null
+          has_delayed_growth?: boolean | null
+          has_fatigue?: boolean | null
+          has_frequent_infections?: boolean | null
+          has_jaundice?: boolean | null
+          has_joint_pain?: boolean | null
+          has_swelling?: boolean | null
+          hematocrit?: number | null
+          hemoglobin_level?: number | null
+          id?: string
+          mch?: number | null
+          mchc?: number | null
+          mcv?: number | null
+          mother_genotype?: string | null
+          patient_age: number
+          patient_gender: string
+          patient_name: string
+          platelet_count?: number | null
+          predicted_genotype?: string | null
+          rbc_count?: number | null
+          recommendation?: string | null
+          risk_level?: string | null
+          user_id: string
+          wbc_count?: number | null
+        }
+        Update: {
+          blood_group?: string | null
+          confidence?: number | null
+          created_at?: string
+          father_genotype?: string | null
+          has_delayed_growth?: boolean | null
+          has_fatigue?: boolean | null
+          has_frequent_infections?: boolean | null
+          has_jaundice?: boolean | null
+          has_joint_pain?: boolean | null
+          has_swelling?: boolean | null
+          hematocrit?: number | null
+          hemoglobin_level?: number | null
+          id?: string
+          mch?: number | null
+          mchc?: number | null
+          mcv?: number | null
+          mother_genotype?: string | null
+          patient_age?: number
+          patient_gender?: string
+          patient_name?: string
+          platelet_count?: number | null
+          predicted_genotype?: string | null
+          rbc_count?: number | null
+          recommendation?: string | null
+          risk_level?: string | null
+          user_id?: string
+          wbc_count?: number | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          full_name: string | null
+          id: string
+          role: string | null
+        }
+        Insert: {
+          created_at?: string
+          full_name?: string | null
+          id: string
+          role?: string | null
+        }
+        Update: {
+          created_at?: string
+          full_name?: string | null
+          id?: string
+          role?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
