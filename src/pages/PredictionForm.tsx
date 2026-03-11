@@ -229,7 +229,7 @@ const PredictionForm = () => {
               <div key={field.key} className="space-y-2">
                 <Label>{field.label}</Label>
                 {field.type === "select" ? (
-                  <Select value={(form as Record<string, string>)[field.key]} onValueChange={(v) => updateField(field.key, v)}>
+                  <Select value={(form as unknown as Record<string, string>)[field.key]} onValueChange={(v) => updateField(field.key, v)}>
                     <SelectTrigger><SelectValue placeholder="Select" /></SelectTrigger>
                     <SelectContent>
                       {field.options?.map((opt) => (
