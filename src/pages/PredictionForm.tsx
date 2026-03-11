@@ -241,7 +241,7 @@ const PredictionForm = () => {
                   <Input
                     type="number"
                     step="0.01"
-                    value={(form as Record<string, string>)[field.key]}
+                    value={(form as unknown as Record<string, string>)[field.key]}
                     onChange={(e) => updateField(field.key, e.target.value)}
                   />
                 )}
