@@ -300,7 +300,7 @@ const PredictionForm = () => {
               <div key={symptom.key} className="flex items-center gap-3">
                 <Checkbox
                   id={symptom.key}
-                  checked={(form as Record<string, boolean>)[symptom.key]}
+                  checked={(form as unknown as Record<string, boolean>)[symptom.key]}
                   onCheckedChange={(checked) => updateField(symptom.key, !!checked)}
                 />
                 <Label htmlFor={symptom.key} className="cursor-pointer">{symptom.label}</Label>
