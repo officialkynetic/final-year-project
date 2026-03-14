@@ -1,23 +1,32 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Activity, Brain, ShieldCheck, BarChart3, ArrowRight } from "lucide-react";
+import {
+  Activity,
+  Brain,
+  ShieldCheck,
+  BarChart3,
+  ArrowRight,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 const features = [
   {
     icon: Brain,
     title: "Machine Learning Powered",
-    description: "Advanced ML algorithms analyze patient data to predict sickle cell genotype with high accuracy.",
+    description:
+      "Advanced ML algorithms analyze patient data to predict sickle cell genotype with high accuracy.",
   },
   {
     icon: ShieldCheck,
     title: "Early Detection",
-    description: "Identify at-risk patients early for timely medical intervention and better health outcomes.",
+    description:
+      "Identify at-risk patients early for timely medical intervention and better health outcomes.",
   },
   {
     icon: BarChart3,
     title: "Comprehensive Analysis",
-    description: "Evaluate blood parameters, family history, and symptoms for a holistic risk assessment.",
+    description:
+      "Evaluate blood parameters, family history, and symptoms for a holistic risk assessment.",
   },
 ];
 
@@ -38,21 +47,31 @@ const Landing = () => {
             </div>
             <h1 className="mb-6 font-display text-4xl font-bold leading-tight text-primary-foreground md:text-6xl">
               Predict Sickle Cell Disease Using{" "}
-              <span className="text-primary brightness-150">Machine Learning</span>
+              <span className="text-primary brightness-150">
+                Machine Learning
+              </span>
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-primary-foreground/70">
-              An intelligent system that analyzes patient blood parameters, family genotype history,
-              and clinical symptoms to predict sickle cell disease risk with confidence.
+              An intelligent system that analyzes patient blood parameters,
+              family genotype history, and clinical symptoms to predict sickle
+              cell disease risk with confidence.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link to="/auth">
-                <Button size="lg" className="gap-2 bg-primary text-lg text-primary-foreground hover:bg-primary/90">
+                <Button
+                  size="lg"
+                  className="gap-2 bg-primary text-lg text-primary-foreground hover:bg-primary/90"
+                >
                   Get Started
                   <ArrowRight className="h-5 w-5" />
                 </Button>
               </Link>
               <Link to="/about">
-                <Button size="lg" variant="outline" className="text-lg border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg border-primary-foreground/10 bg-primary-foreground/10 hover:bg-primary-foreground/10"
+                >
                   Learn More
                 </Button>
               </Link>
@@ -78,7 +97,8 @@ const Landing = () => {
               How It Works
             </h2>
             <p className="text-muted-foreground">
-              Our system uses a trained machine learning model to analyze multiple patient factors
+              Our system uses a trained machine learning model to analyze
+              multiple patient factors
             </p>
           </motion.div>
 
@@ -98,7 +118,9 @@ const Landing = () => {
                 <h3 className="mb-2 font-display text-xl font-semibold text-foreground">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <p className="text-sm text-muted-foreground">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -112,9 +134,21 @@ const Landing = () => {
             Simple 3-Step Process
           </h2>
           {[
-            { step: "1", title: "Enter Patient Data", desc: "Input blood parameters, family genotype, and symptoms." },
-            { step: "2", title: "ML Analysis", desc: "Our trained model processes the data and runs predictions." },
-            { step: "3", title: "Get Results", desc: "View predicted genotype, risk level, and recommendations." },
+            {
+              step: "1",
+              title: "Enter Patient Data",
+              desc: "Input blood parameters, family genotype, and symptoms.",
+            },
+            {
+              step: "2",
+              title: "ML Analysis",
+              desc: "Our trained model processes the data and runs predictions.",
+            },
+            {
+              step: "3",
+              title: "Get Results",
+              desc: "View predicted genotype, risk level, and recommendations.",
+            },
           ].map((item, i) => (
             <motion.div
               key={item.step}
@@ -128,7 +162,9 @@ const Landing = () => {
                 {item.step}
               </div>
               <div>
-                <h3 className="font-display text-lg font-semibold text-foreground">{item.title}</h3>
+                <h3 className="font-display text-lg font-semibold text-foreground">
+                  {item.title}
+                </h3>
                 <p className="text-sm text-muted-foreground">{item.desc}</p>
               </div>
             </motion.div>
@@ -139,7 +175,10 @@ const Landing = () => {
       {/* Footer */}
       <footer className="border-t bg-card px-4 py-8">
         <div className="container mx-auto text-center text-sm text-muted-foreground">
-          <p>© 2026 SicklePredict — Sickle Cell Patient Prediction System Using Machine Learning</p>
+          <p>
+            © 2026 SicklePredict — Sickle Cell Patient Prediction System Using
+            Machine Learning
+          </p>
           <p className="mt-1">Final Year Project</p>
         </div>
       </footer>
